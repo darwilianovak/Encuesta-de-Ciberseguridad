@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Ciberseguridad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/cyber-logo.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-user-shield"></i> Encuesta de Ciberseguridad</h1>
+        <p>Ayúdanos a comprender mejor la seguridad en línea respondiendo esta breve encuesta.</p>
+    </header>
+    
+    <main>
+        <section class="survey-container">
+            <form id="cybersecurity-survey">
+                <div class="question">
+                    <label for="q1"><p>1. ¿Con qué frecuencia cambias tus contraseñas?</p></label>
+                    <select id="q1" name="q1" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="monthly">Mensualmente</option>
+                        <option value="quarterly">Cada tres meses</option>
+                        <option value="rarely">Raramente</option>
+                        <option value="never">Nunca</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="q2"><p>2. ¿Has recibido capacitación en ciberseguridad?</p></label>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="yes" required> Sí</label>
+                        <label><input type="radio" name="q2" value="no"> No</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="q3"><p>3. ¿Qué herramientas utilizas para proteger tu información?</p></label>
+                    <textarea id="q3" name="q3" rows="4" placeholder="Por ejemplo: antivirus, VPN, autenticación de dos factores" required></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="q4"><p>4. Evalúa tu conocimiento sobre ciberseguridad (1 = Muy bajo, 5 = Muy alto):</p></label>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="1" required> 1</label>
+                        <label><input type="radio" name="q4" value="2"> 2</label>
+                        <label><input type="radio" name="q4" value="3"> 3</label>
+                        <label><input type="radio" name="q4" value="4"> 4</label>
+                        <label><input type="radio" name="q4" value="5"> 5</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="q5"><p>5. ¿Qué es el phishing?</p></label>
+                    <div class="options">
+                    <label><input type="radio" name="phishing" value="1"> Robo de identidad en línea</label><br>
+                    <label><input type="radio" name="phishing" value="2"> Un tipo de firewall</label><br>
+                    <label><input type="radio" name="phishing" value="3"> Software antivirus</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label for="q6"><p>6. ¿Cuál de estas imágenes representa un ataque de ransomware?</p></label>
+                    <div class="images">
+                        <label><input type="radio" name="ransomware" value="1"><img src="img/Ataque-de-ransomware.jpg" alt="Ransomware"></label>
+                        <label><input type="radio" name="ransomware" value="2"><img src="img/Firewall.jpg" alt="Firewall"></label>
+                        <label><input type="radio" name="ransomware" value="3"><img src="img/antivirus.avif" alt="Antivirus"></label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label for="q7"><p>7. ¿Cuál es una buena práctica para crear contraseñas seguras?</p></label>
+                    <div class="options">
+                    <label><input type="radio" name="password" value="1"> Usar "123456"</label><br>
+                    <label><input type="radio" name="password" value="2"> Usar una combinación de letras, números y símbolos</label><br>
+                    <label><input type="radio" name="password" value="3"> Usar solo palabras comunes</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label for="q8"><p>8. ¿Qué hacer si recibes un correo sospechoso?</p></label>
+                    <select id="q8" name="q8" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Abrirlo">Abrirlo y hacer clic en los enlaces</option>
+                        <option value="Eliminarlo">Eliminarlo y reportarlo</option>
+                        <option value="Reenviarlo">Reenviarlo a tus contactos</option>
+                    </select>
+                </div>
+                
+                <div class="question">
+                    <label for="q9"><p>9. ¿Cuál de estos dispositivos es más vulnerable a un ataque de IoT?</p></label>
+                    <div class="images">
+                        <label><input type="radio" name="iot" value="1"><img src="img/SmarTV.jpg" alt="Smart TV"></label>
+                        <label><input type="radio" name="iot" value="2"><img src="img/Router.webp" alt="Router"></label>
+                        <label><input type="radio" name="iot" value="3"><img src="img/MEMORIA-USB.webp" alt="USB"></label>
+                    </div>
+                </div>
+                
+                <div class="question">                    
+                    <label for="q10"><p>10. ¿Cómo protegerte contra ataques de malware?</p></label>
+                    <textarea id="q10" name="q10" rows="4" placeholder="Por ejemplo: Mantener el software actualizado" required></textarea>
+                </div>
+                
+                <div class="question">
+                    <p>Verificación CAPTCHA</p>
+                    <p>Resuelve la siguiente operación matemática: <span id="captcha-question"></span></p>
+                    <input type="number" id="captcha-answer" required>
+                </div>
+
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <section class="info-section">
+        <h2><i class="fas fa-lock"></i> ¿Quieres saber más?</h2>
+        <p>Aprende cómo proteger tu información en línea con este video:</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="img/videoplayback.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Seguridad Digital | <a href="img/videoplayback.mp4" target="_blank">LAURA LUCIA GUEVARA GUZMAN</a> | <a href="img/videoplayback.mp4" target="_blank">DARWIN EMILIANO VACA BARRERA</a></p>
+    </footer>
+    
+    <script>
+        function generateCaptcha() {
+            let num1 = Math.floor(Math.random() * 10) + 1;
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            let correctAnswer = num1 + num2;
+            document.getElementById("captcha-question").textContent = `${num1} + ${num2} = ?`;
+            return correctAnswer;
+        }
+        
+        let captchaSolution = generateCaptcha();
+        
+        document.getElementById('cybersecurity-survey').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let userAnswer = parseInt(document.getElementById("captcha-answer").value);
+            if (userAnswer !== captchaSolution) {
+                alert("Respuesta incorrecta en el CAPTCHA. Inténtalo de nuevo.");
+                captchaSolution = generateCaptcha();
+                return;
+            }
+            
+            let name = prompt("Por favor, introduce tus nombres:");
+            let surname = prompt("Por favor, introduce tus apellidos:");
+            let email = prompt("Por favor, introduce tu correo electrónico para enviar la respuesta:");
+            
+            if (!name || !surname || !email || !email.includes("@") || !email.includes(".")) {
+                alert("Por favor, introduce un nombre, apellido y correo electrónico válidos.");
+                return;
+            }
+            
+            let formData = new FormData(this);
+            let responses = `Nombre: ${name}%0D%0A` +
+                            `Apellido: ${surname}%0D%0A` +
+                            `Correo: ${email}%0D%0A%0D%0A`;
+            
+            for (let [key, value] of formData.entries()) {
+                responses += `${key}: ${value}%0D%0A`;
+            }
+            
+            let mailtoLink = `mailto:darwilianovak@gmail.com?subject=Respuestas Encuesta Ciberseguridad&body=${responses}`;
+            window.location.href = mailtoLink;
+            
+            alert("Respuestas enviadas correctamente.");
+            this.reset();
+        });
+    </script>
+    
+</body>
+</html>
