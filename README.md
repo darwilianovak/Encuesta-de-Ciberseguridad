@@ -1,0 +1,3 @@
+Proyecto elabotado por  LAURA LUCIA GUEVARA GUZMAN | DARWIN EMILIANO VACA BARRERA
+INTRODUCCION A LAS TIC'S - [IRCY-L1N-O] - [17873]
+Trabajo Investigativo Práctico
